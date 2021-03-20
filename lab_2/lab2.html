@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: #a34c4c;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+table {
+    margin-left: 200px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+    <a>Menu item 1</a>
+    <a>Menu item 2</a>
+    <a>Menu item 3</a>
+    <a>Menu item 4</a>
+    <a>Menu item 5</a>
+</div>
+
+<table>
+    <tr>
+      <th>Allan</th>
+      <th>Guido</th>
+      <th>Linus</th>
+    </tr>
+    <tr>
+      <td><div class="container">
+        <img src="allan.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist</div>
+        </div>
+      </div></td>
+      <td><div class="container">
+        <img src="guido.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Dutch programmer best known as the creator of the Python programming language</div>
+        </div>
+      </div></td>
+      <td><div class="container">
+        <img src="linus.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Finnish-American software engineer who is the creator and, historically, the principal developer of the Linux kernel</div>
+        </div>
+      </div></td>
+    </tr>
+  </table>
+
+
+
+</body>
+</html>
