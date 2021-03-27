@@ -1,0 +1,31 @@
+<textarea id="textarea">1,2,3,4,5</textarea>
+<script type="text/javascript">
+
+    var area = document.getElementById('textarea');
+    if (area.addEventListener) {
+        area.addEventListener('input', function() {
+
+            var myArray = document.getElementById('textarea').value.split(',')
+
+            for(var i=0; i<myArray.length; i++) {
+                myArray[i] = +myArray[i];
+            }
+            myArray.sort()
+            console.log(myArray);
+
+            var tableArr = [
+                myArray,
+            ]
+            let table = document.createElement('table');
+            for (let row of tableArr) {
+            table.insertRow();
+            for (let cell of row) {
+                let newCell = table.rows[table.rows.length - 1].insertCell();
+                newCell.textContent = cell;
+            }
+            }
+            document.body.appendChild(table);
+
+    }, false);
+    }
+</script>
